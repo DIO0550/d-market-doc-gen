@@ -67,7 +67,6 @@
 | ブランチ戦略 | {GitHub Flow / Git Flow / Trunk-based等} |
 | ブランチ命名 | `{feature/xxx}`, `{fix/xxx}` |
 | コミットメッセージ | {Conventional Commits等} |
-| PR ルール | {レビュー必須/CI パス必須等} |
 
 ## テスト
 
