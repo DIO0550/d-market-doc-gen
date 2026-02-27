@@ -1,6 +1,9 @@
 ---
 name: api-spec
-description: API仕様書作成スキル。Markdown形式のAPI仕様書、OpenAPI(YAML)定義、GraphQLスキーマ定義を対話的に生成する。REST API、GraphQL APIのエンドポイント、リクエスト/レスポンス、認証、エラーハンドリングを網羅。「API仕様書を書きたい」「OpenAPIを作りたい」「GraphQLスキーマを定義したい」「エンドポイント設計をまとめたい」「REST APIの仕様を整理したい」「swagger定義を作りたい」などのリクエスト時に使用。
+description: API仕様書を対話的に生成。Markdown・OpenAPI (YAML)・GraphQLスキーマの3形式に対応。
+disable-model-invocation: true
+allowed-tools: Read, Write, AskUserQuestion
+argument-hint: "[API名]"
 ---
 
 # API仕様書ジェネレーター

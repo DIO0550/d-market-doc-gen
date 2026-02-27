@@ -1,6 +1,9 @@
 ---
 name: system-design
-description: システム設計書作成スキル。アーキテクチャ設計書、ADR（Architecture Decision Record）、C4モデル図を含む設計ドキュメントをMarkdown形式で対話的に生成する。「システム設計書を書きたい」「アーキテクチャを文書化したい」「ADRを書きたい」「C4モデルで設計を整理したい」「インフラ構成をまとめたい」「コンポーネント設計を記録したい」「技術的な意思決定を記録したい」などのリクエスト時に使用。
+description: システム設計書を対話的に生成。アーキテクチャ設計書・ADR・C4モデル図の3形式に対応。
+disable-model-invocation: true
+allowed-tools: Read, Write, AskUserQuestion
+argument-hint: "[システム名]"
 ---
 
 # システム設計書ジェネレーター

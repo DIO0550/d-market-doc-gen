@@ -1,6 +1,9 @@
 ---
 name: feature-spec
-description: 機能仕様書・PRD作成スキル。1機能をドメイン・関心ごとに分割したMarkdown仕様書群を対話的に生成する。フロントエンド・バックエンド・テーブルで専用テンプレートを使い分ける。「機能仕様書を書きたい」「ページの仕様を作りたい」「PRDを作りたい」「画面仕様をまとめたい」「ユーザーストーリーを整理したい」「機能の要件定義をしたい」などのリクエスト時に使用。
+description: 機能仕様書・PRDを対話的に生成。ドメインごとにファイル分割し、FE・BE・DBの専用テンプレートを使い分ける。
+disable-model-invocation: true
+allowed-tools: Read, Write, AskUserQuestion
+argument-hint: "[機能名]"
 ---
 
 # 機能仕様書 / PRD ジェネレーター
