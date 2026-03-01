@@ -2,7 +2,7 @@
 name: detail-spec
 description: 設計仕様書・実装仕様書を対話的に生成。深掘りモード（対話で仕様を練り上げ）とテンプレートモード（素早く生成）の2モード対応。
 disable-model-invocation: true
-allowed-tools: Read, Write, Edit, AskUserQuestion, Glob, Grep
+allowed-tools: Read, Write, AskUserQuestion
 argument-hint: "[機能名]"
 ---
 
