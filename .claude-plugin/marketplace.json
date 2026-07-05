@@ -7,7 +7,7 @@
     {
       "name": "doc-gen-plugin",
       "source": "./plugins/doc-gen-plugin",
-      "description": "仕様書・設計書ドキュメント生成プラグイン（機能仕様書・API仕様書・システム設計書）"
+      "description": "仕様書・設計書ドキュメント生成プラグイン（叩き台・要件定義・設計・実装仕様・運用・機能仕様・API仕様・システム設計）"
     }
   ]
 }
