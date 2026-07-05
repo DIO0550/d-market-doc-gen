@@ -2,7 +2,7 @@
 name: feature-spec
 description: 機能仕様書・PRDを対話的に生成。ドメインごとにファイル分割し、FE・BE・DBの専用テンプレートを使い分ける。
 disable-model-invocation: true
-allowed-tools: Read, Write, AskUserQuestion
+allowed-tools: Read, Write, Edit, AskUserQuestion
 argument-hint: "[機能名]"
 ---
 
@@ -65,7 +65,9 @@ docs/product-management/
    ↓
 6. Write ツールで各 {domain}-spec.md を1ファイルずつ書き出し
    ↓
-7. 最終ディレクトリ構成を表示
+7. レビュー＆修正サイクル
+   ↓
+8. 最終ディレクトリ構成を表示
 ```
 
 ## Step 1: 形式の判定
@@ -116,7 +118,7 @@ docs/{feature-name}/
 ├── index.md                # 概要・背景・スコープ・処理フロー
 ├── {domain-a}-spec.md      # [FE] {内容}
 ├── {domain-b}-spec.md      # [BE] {内容}
-└── {domain-c}-table-spec.md # [DB] {内容}
+└── {domain-c}-spec.md      # [DB] {内容}
 
 この構成でよろしいですか？
 ```
@@ -143,9 +145,26 @@ docs/{feature-name}/
 5. **Write ツールで** 書き出す
 6. 次のドメインへ
 
-## Step 5: 完了報告
+## Step 5: レビュー＆修正サイクル
 
-全ファイル書き出し後、最終的なディレクトリ構成を表示する。
+全ファイル書き出し後、ユーザーにレビューを依頼する:
+
+```
+以下のファイルを書き出しました:
+{ディレクトリ構成}
+
+確認して、修正したい点があれば教えてください。
+- 「{ファイル名}の〜セクションを削除して / 追加して」
+- 「〜を〜に変えて。理由は〜」
+- 「OK」（この内容で確定）
+```
+
+- 修正指示を受けたら Edit ツールで該当ファイルを反映し、修正内容を要約して報告
+- ユーザーが「OK」「これでいい」等と言うまで繰り返す
+
+## Step 6: 完了報告
+
+最終的なディレクトリ構成を表示する。
 
 ## 出力先
 
