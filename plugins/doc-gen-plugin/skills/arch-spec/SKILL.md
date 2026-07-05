@@ -2,7 +2,7 @@
 name: arch-spec
 description: 設計・アーキテクチャドキュメントを対話的に生成。RFC・テクニカルデザイン・Arc42・SDD・仕様探索の5形式に対応。
 disable-model-invocation: true
-allowed-tools: Read, Write, AskUserQuestion
+allowed-tools: Read, Write, Edit, AskUserQuestion
 argument-hint: "[ドキュメント種類 テーマ]"
 ---
 
@@ -16,7 +16,7 @@ argument-hint: "[ドキュメント種類 テーマ]"
 
 | ID | テンプレート | パス | 用途 |
 |:---|:------------|:-----|:-----|
-| B1 | RFC（Request for Comments） | `assets/templates/rfc.md` | 技術提案書。問題→提案→代替案→トレードオフ→承認 |
+| B1 | RFC（Request for Comments） | `assets/templates/rfc.md` | 技術提案書。問題→提案→代替案→トレードオフ→影響範囲・実装計画 |
 | B2 | テクニカルデザインドキュメント | `assets/templates/technical-design.md` | 詳細技術設計。データモデル・シーケンス図・API契約・エラー戦略 |
 | B3 | Arc42 | `assets/templates/arc42.md` | 12セクション構成のアーキテクチャ文書 |
 | B4 | SDD（ソフトウェア設計記述） | `assets/templates/sdd.md` | IEEE 1016/ISO 42010準拠。設計ビューポイント・根拠・トレーサビリティ |
@@ -33,7 +33,9 @@ argument-hint: "[ドキュメント種類 テーマ]"
    ↓
 4. Write ツールでファイルを書き出し
    ↓
-5. 完了報告
+5. レビュー＆修正サイクル
+   ↓
+6. 完了報告
 ```
 
 ## Step 1: テンプレート選択
@@ -95,9 +97,24 @@ AskUserQuestion でテンプレートを選択させる。
 
 **Write ツールで書き出す。**
 
-## Step 5: 完了報告
+## Step 5: レビュー＆修正サイクル
 
-書き出したファイルのパスと概要を表示する。
+書き出したら、ユーザーにレビューを依頼する:
+
+```
+{ファイルパス} に書き出しました。
+確認して、修正したい点があれば教えてください。
+- 「〜のセクションを削除して / 追加して」
+- 「〜を〜に変えて。理由は〜」
+- 「OK」（この内容で確定）
+```
+
+- 修正指示を受けたら Edit ツールで該当箇所を反映し、修正内容を要約して報告
+- ユーザーが「OK」「これでいい」等と言うまで繰り返す
+
+## Step 6: 完了報告
+
+最終版のファイルパスと概要を表示する。
 
 ## 出力先
 

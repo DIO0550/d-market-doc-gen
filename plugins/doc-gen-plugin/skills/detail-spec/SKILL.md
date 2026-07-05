@@ -2,7 +2,7 @@
 name: detail-spec
 description: 設計仕様書・実装仕様書を対話的に生成。深掘りモード（対話で仕様を練り上げ）とテンプレートモード（素早く生成）の2モード対応。
 disable-model-invocation: true
-allowed-tools: Read, Write, AskUserQuestion
+allowed-tools: Read, Write, Edit, Glob, Grep, AskUserQuestion
 argument-hint: "[機能名]"
 ---
 
@@ -63,6 +63,10 @@ argument-hint: "[機能名]"
 **C6（実装前探索）の場合**:
 - 何を実装する予定ですか？（概要）
 - 対象プロジェクトのルートパスは？
+
+**C7（タスクリスト）を単独選択した場合**:
+- タスク分解する元の実装仕様書/計画はありますか？（あれば Read で読む）
+- （分解元がない場合）何を実装しますか？タスク間の依存関係は？
 
 ## Step 4a: 適応的深掘りプロービング
 
