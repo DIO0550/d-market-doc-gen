@@ -1,9 +1,6 @@
 # {API名} - GraphQLスキーマ定義
 
-> **バージョン**: 1.0
 > **作成日**: {YYYY-MM-DD}
-> **作成者**: {作成者}
-> **ステータス**: 下書き | レビュー中 | 承認済み
 > **エンドポイント**: `{graphql_endpoint}`
 
 ## 1. 概要
@@ -69,6 +66,17 @@ type ResourceConnection {
 
 type ResourceEdge {
   node: Resource!
+  cursor: String!
+}
+
+type SubResourceConnection {
+  edges: [SubResourceEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+type SubResourceEdge {
+  node: SubResource!
   cursor: String!
 }
 
@@ -234,9 +242,3 @@ sequenceDiagram
 | 用語 | 定義 |
 |:-----|:-----|
 | {用語} | {定義} |
-
-### 変更履歴
-
-| バージョン | 日付 | 変更内容 | 変更者 |
-|:-----------|:-----|:---------|:-------|
-| 1.0 | {YYYY-MM-DD} | 初版作成 | {作成者} |

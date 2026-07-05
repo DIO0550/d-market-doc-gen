@@ -3,8 +3,6 @@ info:
   title: "{API名}"
   description: "{APIの説明}"
   version: "1.0.0"
-  contact:
-    name: "{作成者}"
 
 servers:
   - url: "{base_url}"

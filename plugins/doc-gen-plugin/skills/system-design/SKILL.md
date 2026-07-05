@@ -16,7 +16,7 @@ argument-hint: "[システム名]"
 |:-----|:------------|:-----|
 | システム設計書 | `assets/templates/system-design.md` | アーキテクチャ全体: コンポーネント、データ、インフラ、非機能要件 |
 | ADR | `assets/templates/adr.md` | 1つのアーキテクチャ判断を背景・結果とともに記録 |
-| C4モデル | `assets/templates/c4-model.md` | 階層的なアーキテクチャビュー: コンテキスト → コンテナ → コンポーネント → コード |
+| C4モデル | `assets/templates/c4-model.md` | 階層的なアーキテクチャビュー: コンテキスト → コンテナ → コンポーネント |
 
 ## ワークフロー
 
