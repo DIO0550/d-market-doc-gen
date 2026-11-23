@@ -1,6 +1,6 @@
 {
   "name": "doc-gen-plugin",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "仕様書・設計書ドキュメント生成プラグイン",
   "author": {
     "name": "DIO0550"
