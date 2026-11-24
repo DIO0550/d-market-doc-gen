@@ -1,0 +1,11 @@
+{
+  "name": "tech-note-plugin",
+  "version": "1.0.0",
+  "description": "技術調査メモ変換プラグイン",
+  "author": {
+    "name": "DIO0550"
+  },
+  "repository": "https://github.com/DIO0550/d-market-doc-gen",
+  "license": "MIT",
+  "skills": "./skills"
+}
