@@ -4,8 +4,8 @@
     "name": "DIO0550"
   },
   "metadata": {
-    "description": "仕様書・設計書ドキュメント生成 Marketplace",
-    "version": "1.0.0"
+    "description": "仕様書・設計書・技術調査メモのドキュメント生成 Marketplace",
+    "version": "1.1.0"
   },
   "plugins": [
     {
@@ -15,6 +15,14 @@
       "version": "1.1.1",
       "category": "productivity",
       "tags": ["documentation", "spec", "design-doc", "requirements", "api-spec", "system-design"]
+    },
+    {
+      "name": "tech-note-plugin",
+      "source": "./plugins/tech-note-plugin",
+      "description": "技術調査メモ変換プラグイン（長い技術解説 md を、知らない人が上から読めば分かる短いメモに作り直す）",
+      "version": "1.0.0",
+      "category": "productivity",
+      "tags": ["documentation", "tech-note", "markdown", "summarization"]
     }
   ]
 }
